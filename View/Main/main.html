@@ -5,30 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APNED</title>
-    <link rel="stylesheet" href="./style/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./resources/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./resources/Splide/css/splide.min.css">
     <link rel="stylesheet" href="./style/main.css">
+
+    <script type="application/javascript" src="./resources/Splide/js/splide.min.js"></script>
+    <script type="application/javascript" src="./script/script.js"></script>
 </head>
 <body>
-    
-    <div class="d-flex py-3 justify-content-evenly botonera">
-        <div class="bgBoton">    
-            <button type="button" class="btn btn-outline-primary btn-lg">Quiénes somos</button>
+    <div class="d-flex-column mt-3 mb-5 justify-content-sm-evenly botonera d-sm-flex">
+        <div class="bgBoton d-flex justify-content-center">    
+            <button type="button" class="btn btn-outline-primary btn-lg mx-4 mx-sm-0 w-100">Quiénes somos</button>
         </div>
-        <div class="bgBoton">
-            <button type="button" class="btn btn-outline-primary btn-lg">Servicios</button>
+        <div class="bgBoton d-flex justify-content-center">    
+            <button type="button" class="btn btn-outline-primary btn-lg mx-4 mx-sm-0 w-100">Servicios</button>
         </div>
-        <div class="bgBoton">
-            <button type="button" class="btn btn-outline-warning btn-lg">Colabora</button>
+        <div class="bgBoton d-flex justify-content-center">    
+            <button type="button" class="btn btn-outline-warning btn-lg mx-4 mx-sm-0 w-100">Colabora con nosotros</button>
         </div>
-        <div class="bgBoton">
-            <button type="button" class="btn btn-outline-primary btn-lg">Contacto</button>
+        <div class="bgBoton d-flex justify-content-center">    
+            <button type="button" class="btn btn-outline-primary btn-lg mx-4 mx-sm-0 w-100">Contacto</button>
         </div>
-        <div class="bgBoton">
-            <button type="button" class="btn btn-outline-primary btn-lg">Multimedia</button>
+        <div class="bgBoton d-flex justify-content-center">    
+            <button type="button" class="btn btn-outline-primary btn-lg mx-4 mx-sm-0 w-100">Multimedia</button>
         </div>
-
     </div>
-    
-    <script type="application/javascript" src="./style/Bootstrap/js/bootstrap.bundle.js"></script>
+    <div id="cuerpo">
+        <section class="splide" aria-labelledby="carousel-heading">
+
+          
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide d-flex justify-content-center my-3"><h1>Slide 01</h1></li>
+                    <li class="splide__slide d-flex justify-content-center my-3"><h1>Slide 02</h1></li>
+                    <li class="splide__slide d-flex justify-content-center my-3"><h1>Slide 03</h1></li>
+                </ul>
+            </div>
+          </section>
+    </div>
+
+
+    <script type="application/javascript" src="./resources/Bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
