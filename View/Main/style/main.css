@@ -1,0 +1,8 @@
+.botonera {
+    background-image: url('../resources/recta.svg');
+    background-size: contain;
+}
+
+.bgBoton {
+    background-color: white;
+}
