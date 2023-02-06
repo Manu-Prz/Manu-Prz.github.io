@@ -7,6 +7,7 @@
     <title>APNED</title>
     <link rel="stylesheet" href="./resources/Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./resources/Splide/css/splide.min.css">
+    <link rel="stylesheet" href="./resources/Flag-icons-main/css/flag-icons.css">
     <link rel="stylesheet" href="./style/main.css">
 
     <script src="./resources/JQuery/jquery-3.6.3.min.js"></script>
@@ -14,24 +15,35 @@
     <script type="application/javascript" src="./script/script.js"></script>
 </head>
 <body>
-    <div class="d-flex-column mt-3 mb-5 justify-content-md-evenly botonera d-md-flex" id="botonera">
-        <div class="bgBoton d-flex justify-content-center">    
+    <div class="d-flex-column mt-3 mb-5 justify-content-md-evenly botonera d-md-flex collapse" id="botonera">
+        <div class="bgBoton d-flex justify-content-center mb-2 mb-md-0">    
             <button type="button" id="quien" class="btn btn-outline-primary btn-lg mx-4 mx-md-0 w-100">Quiénes somos</button>
         </div>
-        <div class="bgBoton d-flex justify-content-center">    
+        <div class="bgBoton d-flex justify-content-center mb-2 mb-md-0">    
             <button type="button" id="servicios" class="btn btn-outline-primary btn-lg mx-4 mx-md-0 w-100">Servicios</button>
         </div>
-        <div class="bgBoton d-flex justify-content-center">    
-            <button type="button" id="colabora" class="btn btn-outline-warning btn-lg mx-4 mx-md-0 w-100">Colabora con nosotros</button>
+        <div class="bgBoton d-flex justify-content-center mb-2 mb-md-0">    
+            <button type="button" id="colabora" class="btn btn-outline-warning btn-lg mx-4 mx-md-0 w-100">Colabora</button>
         </div>
-        <div class="bgBoton d-flex justify-content-center">    
+        <div class="bgBoton d-flex justify-content-center mb-2 mb-md-0">    
             <button type="button" id="contacto" class="btn btn-outline-primary btn-lg mx-4 mx-md-0 w-100">Contacto</button>
         </div>
-        <div class="bgBoton d-flex justify-content-center">    
+        <div class="bgBoton d-flex justify-content-center mb-2 mb-md-0">    
             <button type="button" id="multimedia" class="btn btn-outline-primary btn-lg mx-4 mx-md-0 w-100">Multimedia</button>
         </div>
+        <div class="bgBoton d-flex justify-content-center">    
+            <div class="bgSwitch btn-group mx-4 mx-md-0 w-100" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary d-flex justify-content-center" for="btnradio1"><span class="fi fi-es"></span></label>
+              
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary d-flex justify-content-center" for="btnradio2"><span class="fi fi-es-ga"></span></label>
+              
+            </div>
+            
+        </div>
     </div>
-    <div id="cuerpo">
+    <div id="cuerpo" class="d-flex flex-column justify-content-center text-justify mx-5">
     </div>
 
 
