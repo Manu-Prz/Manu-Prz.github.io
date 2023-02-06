@@ -25,6 +25,7 @@ function menuHandler(e) {
     
     if (!e.matches) {
         $("#botonera")[0].classList.add("collapse");
+        $("#botonera")[0].style.backgroundImage = "";
 
         if (!document.getElementById("menuDisplayer")){
 
@@ -53,6 +54,9 @@ function menuHandler(e) {
         if (document.getElementById("menuDisplayer")) {
             document.getElementById("menuDisplayer").remove()
         }
+
+        $("#botonera")[0].style.backgroundImage = "url('resources/recta.svg')";
+
     }
     
 
