@@ -25,7 +25,7 @@ function menuHandler(e) {
     
     if (!e.matches) {
         $("#botonera")[0].classList.add("collapse");
-        $("#botonera")[0].style.backgroundImage = "";
+        $("#botonera")[0].style.backgroundImage = "none";
 
         if (!document.getElementById("menuDisplayer")){
 
@@ -45,14 +45,15 @@ function menuHandler(e) {
             menuDisplayer.append(img);
             
             div.setAttribute("class", "d-flex justify-content-evenly");
+            div.setAttribute("id", "menuDisplayerContainer")
             div.append(menuDisplayer);
             
             document.body.insertBefore(div,$("#botonera")[0]);
         }
         
     } else {
-        if (document.getElementById("menuDisplayer")) {
-            document.getElementById("menuDisplayer").remove()
+        if (document.getElementById("menuDisplayerContainer")) {
+            document.getElementById("menuDisplayerContainer").remove()
         }
 
         $("#botonera")[0].style.backgroundImage = "url('resources/recta.svg')";
