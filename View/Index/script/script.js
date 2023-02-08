@@ -34,21 +34,31 @@ function menuHandler(e) {
             let img = document.createElement("img");
             
             menuDisplayer.setAttribute("type", "button");
-            menuDisplayer.setAttribute("class", "btn btn-primary mx-4 my-5 w-100");
+            menuDisplayer.setAttribute("class", "btn btn-outline-primary mx-4 w-100");
             menuDisplayer.setAttribute("id", "menuDisplayer");
             menuDisplayer.setAttribute("data-bs-toggle", "collapse");
             menuDisplayer.setAttribute("data-bs-target", "#botonera");
             menuDisplayer.setAttribute("aria-expanded", "false");
             menuDisplayer.setAttribute("aria-controls", "#botonera");
 
-            img.setAttribute("src", "resources/navBar.svg");
+            img.setAttribute("src", "resources/navBar3.svg");
             menuDisplayer.append(img);
             
-            div.setAttribute("class", "d-flex justify-content-evenly");
+            div.setAttribute("class", "d-flex justify-content-evenly mt-3 mb-5");
             div.setAttribute("id", "menuDisplayerContainer")
             div.append(menuDisplayer);
             
             document.body.insertBefore(div,$("#botonera")[0]);
+
+            $("#menuDisplayer")[0].addEventListener("click", () => {
+                if ($("#menuDisplayer")[0].classList.contains("collapsed")) {
+                    $("#menuDisplayer")[0].classList.remove("btn-primary");
+                    $("#menuDisplayer")[0].classList.add("btn-outline-primary");
+                } else {
+                    $("#menuDisplayer")[0].classList.add("btn-primary");
+                    $("#menuDisplayer")[0].classList.remove("btn-outline-primary");
+                }
+            })
         }
         
     } else {
