@@ -1,3 +1,7 @@
+* {
+    position: relative;
+}
+
 .botonera {
     background-image: url('../resources/images/recta.svg');
     background-size: contain;
@@ -13,4 +17,18 @@
 
 .text-justify {
     text-align: justify;
+}
+
+.bgContainer {
+    z-index: 0;
+}
+
+.bgImage {
+    left: 0;
+    position: absolute;
+    opacity: 0.04;
+    top: 0;
+    width: 75%;
+    height: auto;
+    margin: 12.5% 12.5%;
 }
