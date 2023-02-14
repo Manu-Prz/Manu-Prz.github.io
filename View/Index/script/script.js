@@ -12,6 +12,8 @@ window.onload = function() {
     let multimedia = document.getElementById("multimedia");
 
 
+	//IDEA: Lo que haría un hipotético selector de idioma sería simplemente seleccionar una variable u otra, que se concatenaría al string de la ruta enviada a la función "cargar()"
+
     quien.addEventListener("click", () => cargar(quien, "../QuienesSomos/quienesSomos.html"));
     servicios.addEventListener("click", () => cargar(servicios, "../Servicios/servicios.html"));
     colabora.addEventListener("click", () => cargar(colabora, "../Colabora/colabora.html"));
