@@ -43,7 +43,7 @@ function menuHandler(e) {
             menuDisplayer.setAttribute("aria-expanded", "false");
             menuDisplayer.setAttribute("aria-controls", "#botonera");
 
-            img.setAttribute("src", "resources/images/navBar3.svg");
+            img.setAttribute("src", "resources/visual/navBar3.svg");
             menuDisplayer.append(img);
             
             div.setAttribute("class", "d-flex justify-content-evenly mt-3 mb-5");
@@ -68,7 +68,7 @@ function menuHandler(e) {
             document.getElementById("menuDisplayerContainer").remove()
         }
 
-        $("#botonera")[0].style.backgroundImage = "url('resources/images/recta.svg')";
+        $("#botonera")[0].style.backgroundImage = "url('resources/visual/recta.svg')";
 
     }
     
