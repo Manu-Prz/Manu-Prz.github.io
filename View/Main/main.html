@@ -33,6 +33,9 @@
         $('.carrusel').slick({
             adaptiveHeight: true,
             arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            fade: true
         });
     });
 
@@ -47,7 +50,7 @@
     $( ".flecha" ).hover(
         function(){
             $( this ).fadeOut( 5 );
-            $(this).prop("src", "./resources/visual/icons/arrowActiveV3.svg");
+            $(this).prop("src", "./resources/visual/icons/arrowActiveV4.svg");
             $( this ).fadeIn( 150 );
         },
         function() {
@@ -58,9 +61,10 @@
     );
 
 </script>
-<div class="d-flex justify-content-evenly">
+<div class="botoneraCarrusel d-flex justify-content-between">
     <img class="left flecha" src="./resources/visual/icons/arrowRestingV3.svg" alt="">
-    <img class="right flecha" src="./resources/visual/icons/arrowRestingV3.svg" alt=""  style="transform: rotate(180deg);">
+    <div class="spacer flex-grow-1"></div>
+    <img class="right flecha" src="./resources/visual/icons/arrowRestingV3.svg" alt="" style="transform: rotate(180deg);">
 
 </div>
 <div class="carrusel">

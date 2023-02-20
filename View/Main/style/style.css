@@ -6,14 +6,25 @@
     
   
 }
+.carrusel {
+    z-index: 1;
+}
+
+.botoneraCarrusel {
+    position: absolute;
+    width: 100%;
+}
+
+.spacer {
+    z-index: 0;
+}
 
 .flecha {
     width: 10%;
+    z-index: 2;
 }
 
 .marcoFoto {
     max-height: 50vh;
-    
-    
 
 }
