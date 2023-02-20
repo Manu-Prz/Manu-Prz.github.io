@@ -31,9 +31,38 @@
 <script>
     $(document).ready(function(){
         $('.carrusel').slick({
+            adaptiveHeight: true,
+            arrows: false,
         });
     });
+
+    $('.left').click(function(){
+        $('.carrusel').slick('slickPrev');
+    })
+
+    $('.right').click(function(){
+        $('.carrusel').slick('slickNext');
+    })
+
+    $( ".flecha" ).hover(
+        function(){
+            $( this ).fadeOut( 5 );
+            $(this).prop("src", "./resources/visual/icons/arrowActiveV3.svg");
+            $( this ).fadeIn( 150 );
+        },
+        function() {
+            $( this ).fadeOut( 5 );
+            $(this).prop("src", "./resources/visual/icons/arrowRestingV3.svg");
+            $( this ).fadeIn( 150 );
+        }
+    );
+
 </script>
+<div class="d-flex justify-content-evenly">
+    <img class="left flecha" src="./resources/visual/icons/arrowRestingV3.svg" alt="">
+    <img class="right flecha" src="./resources/visual/icons/arrowRestingV3.svg" alt=""  style="transform: rotate(180deg);">
+
+</div>
 <div class="carrusel">
     
     <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic1.jpg" alt=""></div>
@@ -42,7 +71,7 @@
     <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic4.jpg" alt=""></div>
     <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic5.jpg" alt=""></div>
     <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic6.jpg" alt=""></div>
-    <!--<div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic7.jpg" alt=""></div>-->
+    <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic7.jpg" alt=""></div>
     <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic8.jpg" alt=""></div>
     
 </div>
