@@ -34,7 +34,7 @@
             adaptiveHeight: true,
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 3000,
             fade: true
         });
     });
@@ -47,35 +47,40 @@
         $('.carrusel').slick('slickNext');
     })
 
-    $( ".flecha" ).hover(
+    $(".flecha").hover(
         function(){
-            $( this ).fadeOut( 5 );
-            $(this).prop("src", "./resources/visual/icons/arrowActiveV4.svg");
-            $( this ).fadeIn( 150 );
+            
+            $(this).stop().fadeOut(5);
+            $(this).prop("src", "./resources/visual/icons/arrowActiveV5.svg");
+            $(this).fadeIn( 150 );
         },
         function() {
-            $( this ).fadeOut( 5 );
-            $(this).prop("src", "./resources/visual/icons/arrowRestingV3.svg");
+            $(this).stop().fadeOut(5);
+            $(this).prop("src", "./resources/visual/icons/arrowRestingV4.svg");
             $( this ).fadeIn( 150 );
         }
     );
 
 </script>
-<div class="botoneraCarrusel d-flex justify-content-between">
-    <img class="left flecha" src="./resources/visual/icons/arrowRestingV3.svg" alt="">
-    <div class="spacer flex-grow-1"></div>
-    <img class="right flecha" src="./resources/visual/icons/arrowRestingV3.svg" alt="" style="transform: rotate(180deg);">
-
-</div>
-<div class="carrusel">
+<section class="d-flex flex-wrap">
     
-    <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic1.jpg" alt=""></div>
-    <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic2.jpg" alt=""></div>
-    <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic3.jpg" alt=""></div>
-    <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic4.jpg" alt=""></div>
-    <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic5.jpg" alt=""></div>
-    <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic6.jpg" alt=""></div>
-    <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic7.jpg" alt=""></div>
-    <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic8.jpg" alt=""></div>
+    <div class="botoneraCarrusel col-6 col-md-1 d-flex align-items-center justify-content-center mb-3 mb-md-0">
+        <img class="left flecha" src="./resources/visual/icons/arrowRestingV4.svg" alt="">
+    </div>
+    <div class="botoneraCarrusel col-6 col-md-1 d-flex align-items-center justify-content-center order-md-last mb-3 mb-md-0">
+        <img class="right flecha" src="./resources/visual/icons/arrowRestingV4.svg" alt="" style="transform: rotate(180deg);">
+    </div>
+    <div class="carrusel col-12 col-md-10" >
+        
+        <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic1.jpg" alt=""></div>
+        <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic2.jpg" alt=""></div>
+        <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic3.jpg" alt=""></div>
+        <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic4.jpg" alt=""></div>
+        <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic5.jpg" alt=""></div>
+        <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic6.jpg" alt=""></div>
+        <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic7.jpg" alt=""></div>
+        <div class="marcoFoto"><img class="fotoCarrusel" src="./resources/visual/pics/pic8.jpg" alt=""></div>
+        
+    </div>
     
-</div>
+</section>

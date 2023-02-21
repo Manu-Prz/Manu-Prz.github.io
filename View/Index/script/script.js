@@ -20,6 +20,9 @@ window.onload = function() {
     contacto.addEventListener("click", () => cargar(contacto, "../Contacto/contacto.html"));
     multimedia.addEventListener("click", () => cargar(multimedia, "../Multimedia/multimedia.html"));
 
+    document.getElementById("logo").style.height = `${document.querySelector("#quien").offsetHeight}px`;
+    document.getElementById("logo").style.display = "inline";
+    
 }
 
 // media query handler function
