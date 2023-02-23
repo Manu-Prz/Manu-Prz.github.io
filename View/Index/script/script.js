@@ -1,6 +1,6 @@
 window.onload = function() {
-    $("#cuerpo").load("../Main/main.html");
-    const mqLarge  = window.matchMedia( '(min-width: 768px)' );
+    $("#cuerpo").load("../main/main.html");
+    const mqLarge  = window.matchMedia('(min-width: 768px)');
     menuHandler(mqLarge);
     
     mqLarge.addEventListener('change', menuHandler);
@@ -10,15 +10,22 @@ window.onload = function() {
     let colabora = document.getElementById("colabora");
     let contacto = document.getElementById("contacto");
     let multimedia = document.getElementById("multimedia");
+    let quienesSomos = document.getElementById("quienesSomos");
+    let queHacemos= document.getElementById("queHacemos");
+    let nuestraHistoria= document.getElementById("nuestraHistoria");
+    let subMenu1 = document.getElementById("subMenu1");
 
 
 	//IDEA: Lo que haría un hipotético selector de idioma sería simplemente seleccionar una variable u otra, que se concatenaría al string de la ruta enviada a la función "cargar()"
 
-    quien.addEventListener("click", () => cargar(quien, "../QuienesSomos/quienesSomos.html"));
-    servicios.addEventListener("click", () => cargar(servicios, "../Servicios/servicios.html"));
-    colabora.addEventListener("click", () => cargar(colabora, "../Colabora/colabora.html"));
-    contacto.addEventListener("click", () => cargar(contacto, "../Contacto/contacto.html"));
-    multimedia.addEventListener("click", () => cargar(multimedia, "../Multimedia/multimedia.html"));
+    servicios.addEventListener("click", () => cargar(servicios, "../servicios/servicios.html"));
+    colabora.addEventListener("click", () => cargar(colabora, "../colabora/colabora.html"));
+    contacto.addEventListener("click", () => cargar(contacto, "../contacto/contacto.html"));
+    multimedia.addEventListener("click", () => cargar(multimedia, "../multimedia/multimedia.html"));
+    quienesSomos.addEventListener("click", () => cargar(quienesSomos, "../quienesSomos/quienesSomos.html"));
+    queHacemos.addEventListener("click", () => cargar(queHacemos, "../queHacemos/queHacemos.html"));
+    nuestraHistoria.addEventListener("click", () => cargar(nuestraHistoria, "../nuestraHistoria/nuestraHistoria.html"));
+    quien.addEventListener("click", rotarPuntero);
 
     document.getElementById("logo").style.height = `${document.querySelector("#quien").offsetHeight}px`;
     document.getElementById("logo").style.display = "inline";
@@ -53,7 +60,7 @@ function menuHandler(e) {
             div.setAttribute("id", "menuDisplayerContainer")
             div.append(menuDisplayer);
             
-            document.body.insertBefore(div,$("#botonera")[0]);
+            $("#topMenu")[0].insertBefore(div,$("#botonera")[0]);
 
             $("#menuDisplayer")[0].addEventListener("click", () => {
                 if ($("#menuDisplayer")[0].classList.contains("collapsed")) {
@@ -62,6 +69,9 @@ function menuHandler(e) {
                 } else {
                     $("#menuDisplayer")[0].classList.add("btn-primary");
                     $("#menuDisplayer")[0].classList.remove("btn-outline-primary");
+
+                    document.getElementById("logo").style.height = `${document.querySelector("#quien").offsetHeight}px`;
+                    document.getElementById("logo").style.display = "inline";
                 }
             })
         }
@@ -78,9 +88,18 @@ function menuHandler(e) {
 
 }
 
+function rotarPuntero(e) {
+    if (!e.target.classList.contains("collapsed")) {
+        document.getElementById("puntero").style.transform = "rotate(180deg)";
+
+    } else {
+        document.getElementById("puntero").style.transform = "";
+    }
+}
+
 function cargar(elemento, objetivo) {
 
-    let botones = document.querySelectorAll("div.botonera button");
+    let botones = document.querySelectorAll("section#topMenu button");
     for (let boton of botones) {
         if (boton != elemento) {
             

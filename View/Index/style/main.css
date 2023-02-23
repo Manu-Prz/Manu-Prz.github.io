@@ -36,3 +36,8 @@
 #logo {
     display: none;
 }
+
+#puntero {
+    display: inline-block;
+
+}
